@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table book</title>
+    <link rel="stylesheet" href="sass/style.css" />
+  </head>
+  <body>
+    <div class="theme-toggle">
+      <button id="themeButton">Dark mode</button>
+    </div>
+
+    <table class="book-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Progress</th>
+          <th>Rating</th>
+          <th>URL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>11/11/2022</td>
+          <td>Fire & Blood</td>
+          <td>George R. R. Martin</td>
+          <td>
+            <span class="tag fantasy">Fantasy</span>
+            <span class="tag fiction">Fiction</span>
+          </td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress" style="width: 50%"></div>
+            </div>
+            50%
+          </td>
+          <td class="rating">⭐⭐⭐⭐⭐</td>
+          <td><a href="#">https://abc.in</a></td>
+        </tr>
+        <tr>
+          <td>22/10/2022</td>
+          <td>Bridge of Clay</td>
+          <td>Markus Zusak</td>
+          <td><span class="tag fiction">Fiction</span></td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%"></div>
+            </div>
+            75%
+          </td>
+          <td class="rating">⭐⭐⭐⭐</td>
+          <td><a href="#">https://abc.in</a></td>
+        </tr>
+        <tr>
+          <td>22/05/2022</td>
+          <td>Do Epic Shit</td>
+          <td>Ankur Warikoo</td>
+          <td><span class="tag self-help">Self-help</span></td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress" style="width: 100%"></div>
+            </div>
+            100%
+          </td>
+          <td class="rating">⭐⭐⭐⭐⭐</td>
+          <td><a href="#">https://abc.in</a></td>
+        </tr>
+        <tr>
+          <td>14/07/2020</td>
+          <td>My Sister's Keeper</td>
+          <td>Jodi Picoult</td>
+          <td>
+            <span class="tag fiction">Fiction</span>
+            <span class="tag sappy">Sappy</span>
+          </td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress" style="width: 100%"></div>
+            </div>
+            100%
+          </td>
+          <td class="rating">⭐⭐⭐⭐⭐</td>
+          <td><a href="#">https://abc.in</a></td>
+        </tr>
+        <tr>
+          <td>12/04/2021</td>
+          <td>Atomic Habits</td>
+          <td>James Clear</td>
+          <td><span class="tag self-help">Self-help</span></td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress" style="width: 100%"></div>
+            </div>
+            100%
+          </td>
+          <td class="rating">⭐⭐⭐⭐⭐</td>
+          <td><a href="#">https://abc.in</a></td>
+        </tr>
+        <tr>
+          <td>02/02/2022</td>
+          <td>Dune</td>
+          <td>Frank Herbert</td>
+          <td><span class="tag sci-fi">Sci-fi</span></td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress" style="width: 100%"></div>
+            </div>
+            100%
+          </td>
+          <td class="rating">⭐⭐⭐⭐⭐</td>
+          <td><a href="#">https://abc.in</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+          const themeButton = document.getElementById('themeButton');
+      const body = document.body;
+
+      themeButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        if (body.classList.contains('dark-mode')) {
+          themeButton.textContent = 'Светлый режим';
+        } else {
+          themeButton.textContent = 'Темный режим';
+        }
+      });
+    </script>
+  </body>
+</html>
